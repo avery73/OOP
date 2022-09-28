@@ -8,9 +8,10 @@ def main():
    start_bal = float(input('Enter your starting balance: '))
 
    # Create a BankAccount object.
-   savings = bc.BankAccount(start_bal)
+   savings = bc.BankAccount(start_bal) # instance of bank account class
+   # creates object (savings)
 
-   # Deposit the user's paycheck.
+   # Deposit the user's paycheck. # deposit is a method
    pay = float(input('How much were you paid this week? '))
    print('I will deposit that into your account.')
    savings.deposit(pay)
@@ -29,7 +30,7 @@ def main():
         format(savings.get_balance(), ',.2f'),
         sep='')
 
-   print(savings)
+   print(savings) #savings is an instance of a class
 
 # Call the main function.
 main()

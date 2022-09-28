@@ -19,9 +19,9 @@ class BankAccount:
       # The withdraw method withdraws an amount
       # from the account.
 
-    def withdraw(self, amount):
-        if self.__balance >= amount:
-            self.__balance -= amount
+    def withdraw(self, amount): # need validation
+        if self.__balance >= abs(amount): # abs help validate, absolute value
+            self.__balance -= abs(amount)
         else:
             print('Error: Insufficient funds')
 
@@ -34,4 +34,7 @@ class BankAccount:
 
 
     def __str__(self):
-        return 'The balance is $' + format(self.__balance, ',.2f')
+       return 'The balance is $' + format(self.__balance, ',.2f')
+# string method - lets us return attribute(s) in a customized way
+# instead of printing jibberish in print(savings)
+# it prints you balance
